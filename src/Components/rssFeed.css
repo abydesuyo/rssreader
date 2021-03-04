@@ -1,0 +1,30 @@
+.rssfeed {
+align-self: stretch;
+align-content: flex-start;
+}
+
+.tradeFeed {
+    align-content: flex-start;
+    text-align: left;
+}
+
+.tradeTable {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: smaller;
+    /* border-style: dotted; */
+    background-color: bisque;
+}
+
+.tradeTableRow {
+    padding: 0%;
+}
+
+.tradeTableCol {
+    border-style: solid;
+    width: fit-content;
+}
+
+.tradeTableHead {
+    border-style: solid;
+    width: fit-content;
+}
