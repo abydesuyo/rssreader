@@ -71,9 +71,23 @@ class RSSFeed extends Component {
                   <div className="widget widget_tweets">
                      <h4 className="widget-title">Trade Feed</h4>
                      {/* <div><pre>{JSON.stringify(tradefeed, null, 2) }</pre></div> */}
-                     <ul id="rssfeed">
-                        {tradefeed.items.map(item => <li><span><b>{item.title}</b><br/>{item.pubDate}<br/>{item.description}<br/></span><br/></li>)}
-                     </ul>
+                     <div id="rssfeed">
+                        {tradefeed.items.map(
+                          item => 
+                          <div><span>
+                            <b>{item.title}</b>
+                            <br/>
+                            {item.pubDate}<br/>
+                            <table>
+                              <tr>
+                                {item.description.split(',').map( element => <td>{element}</td>)}
+                              </tr>
+                            </table> 
+                            </span>
+                            <br/>
+                          </div>)
+                          }
+                     </div>
                   </div>
          </div>
       </section>
