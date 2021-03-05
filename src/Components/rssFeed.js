@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './rssFeed.css'
 
-const headers = ['ID','ID','Type','Prodcut','Action','Type','IDontKnow','IDontKnow','Empty','DCF','StartDate','Empty','ExectionDateUTC','Empty','Empty','ExectionDateGMT','EndDate','Empty','Rate','Empty','Empty','Empty','Tenor','Empty','','Empty','Empty','Empty','PayIndex','IDontKnow','IDontKnow','IDontKnow','IDontKnow','IDontKnow','IDontKnow','IDontKnow','PayCurrency','RecCurrency','Empty','Empty','Empty','Empty','Empty','Empty','Empty','Empty','PayFreq','RecFreq','IDontKnow','IDontKnow','Empty','Empty','Empty','Empty','Empty','Empty','PaySetttleCurr','RecSettleCurr','Empty','Empty','Empty','Empty','Empty','Empty','RecIndex','Empty','Empty','Empty','Empty','Empty','Empty','SEF']
+const headers = ['ID','ID','Type','Prodcut','Action','Type','IDontKnow','IDontKnow','Empty','DCF','StartDate','Empty','ExectionDateUTC','Empty','Empty','ExectionDateGMT','EndDate','Empty','Rate','Empty','Empty','Empty','Tenor','Empty','Empty','Empty','Empty','Empty','PayIndex','IDontKnow','IDontKnow','IDontKnow','IDontKnow','IDontKnow','IDontKnow','IDontKnow','PayCurrency','RecCurrency','Empty','Empty','Empty','Empty','Empty','Empty','Empty','Empty','PayFreq','RecFreq','IDontKnow','IDontKnow','Empty','Empty','Empty','Empty','Empty','Empty','Empty','PaySetttleCurr','RecSettleCurr','Empty','Empty','Empty','Empty','Empty','Empty','RecIndex','Empty','Empty','Empty','Empty','Empty','Empty','SEF']
 const parseUrl = 'https://api.rss2json.com/v1/api.json?rss_url=';
 // const rssUrl = 'https://kgc0418-tdw-data-0.s3.amazonaws.com/cftc/rss/CFTC_RSS_RATES.rss';
 // const rssUrl = 'https://kgc0418-tdw-data-0.s3.amazonaws.com/ca/rss/CA_RSS_RATES.rss';
