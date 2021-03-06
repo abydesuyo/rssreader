@@ -1,0 +1,10 @@
+{
+    "rssfeeds":[
+        {
+            "url":"https://kgc0418-tdw-data-0.s3.amazonaws.com/cftc/rss/CFTC_RSS_RATES.rss"
+        },
+        {
+            "url":"https://kgc0418-tdw-data-0.s3.amazonaws.com/ca/rss/CA_RSS_RATES.rss"
+        }
+        ]
+}
