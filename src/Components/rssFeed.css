@@ -1,6 +1,7 @@
 .rssfeed {
 align-self: stretch;
 align-content: flex-start;
+background-color: inherit;
 }
 
 .tradeFeed {
