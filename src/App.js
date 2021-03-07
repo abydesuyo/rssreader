@@ -17,7 +17,7 @@ class App extends Component {
 
   getConfig(){
     $.ajax({
-      url:'/config.json',
+      url:'config.json',
       dataType:'json',
       cache: false,
       success: function(data){
