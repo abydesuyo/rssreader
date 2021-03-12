@@ -71,11 +71,11 @@ class RSSFeed extends Component {
 
       return (
          <section id="rssfeed">
-            <div className="table-wrapper">
-                     <h2 >{tradefeed.feed.url.split('/')[tradefeed.feed.url.split('/').length-1].split('_')[0]}-{tradefeed.feed.title}</h2>
+          <h2 >{tradefeed.feed.url.split('/')[tradefeed.feed.url.split('/').length-1].split('_')[0]}-{tradefeed.feed.title}</h2>
+            <div className="table-wrapper">  
                      {/* <div><pre>{JSON.stringify(tradefeed, null, 2) }</pre></div> */}
-                     <div id="rssfeed" >
-                     <table>
+                  <div id="rssfeed" >
+                    <table>
                      <tr>
                         {
                           headers.map(header => <th>{header}</th>)
@@ -96,9 +96,9 @@ class RSSFeed extends Component {
                             <br/>
                           </tr>)
                         }
-                      </table>
+                    </table>
                   </div>
-         </div>
+              </div>
       </section>
       );
    }
