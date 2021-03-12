@@ -71,14 +71,14 @@ class RSSFeed extends Component {
 
       return (
          <section id="rssfeed">
-            <div className="tradeFeed">
-                     <h2 className="widget-title">{tradefeed.feed.url.split('/')[tradefeed.feed.url.split('/').length-1].split('_')[0]}-{tradefeed.feed.title}</h2>
+            <div className="table-wrapper">
+                     <h2 >{tradefeed.feed.url.split('/')[tradefeed.feed.url.split('/').length-1].split('_')[0]}-{tradefeed.feed.title}</h2>
                      {/* <div><pre>{JSON.stringify(tradefeed, null, 2) }</pre></div> */}
-                     <div id="rssfeed">
-                     <table className="tradeTable">
+                     <div id="rssfeed" >
+                     <table>
                      <tr>
                         {
-                          headers.map(header => <th className="tradeTableHead">{header}</th>)
+                          headers.map(header => <th>{header}</th>)
                         }
                       </tr>
                         {tradefeed.items.map(
@@ -91,7 +91,7 @@ class RSSFeed extends Component {
                               {item.pubDate}
                             </tr> */}
                             {/* <tr className="tradeTableRow"> */}
-                              {item.description.split(',').map( element => <td className="tradeTableCol">{element.replace(/['"]+/g, '')}</td>)}
+                              {item.description.split(',').map( element => <td>{element.replace(/['"]+/g, '')}</td>)}
                             {/* </tr> */}
                             <br/>
                           </tr>)

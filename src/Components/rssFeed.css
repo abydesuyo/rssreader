@@ -1,31 +1,42 @@
-.rssfeed {
-align-self: stretch;
-align-content: flex-start;
-background-color: inherit;
+html,
+body {
+	height: 100%;
 }
 
-.tradeFeed {
-    align-content: flex-start;
-    text-align: left;
-}
-
-.tradeTable {
-    font-family: 'Courier New', Courier, monospace;
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
     font-size: smaller;
-    /* border-style: dotted; */
-    background-color: bisque;
+	font-weight: 100;
 }
 
-.tradeTableRow {
-    padding: 0%;
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-.tradeTableCol {
-    border-style: solid;
-    width: fit-content;
+table {
+    padding: 1em;
+	width: 800px;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-collapse: separate;
 }
 
-.tradeTableHead {
-    border-style: solid;
-    width: fit-content;
+tr:hover {background-color: rgb(77, 8, 54);}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+    width:fit-content
+}
+
+th {
+	text-align: left;
+    background-color: #55608f;
 }
