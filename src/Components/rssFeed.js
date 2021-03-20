@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './rssFeed.css'
 
 const headers = ['ID','ID','Type','Product','Action','Type','IDontKnow','IDontKnow','Empty','DCF','StartDate','Empty','ExecutionDateUTC','Empty','Empty','ExecutionDateGMT','EndDate','Empty','Rate','Empty','Empty','Empty','Tenor','Empty','Empty','Empty','Empty','Empty','PayIndex','IDontKnow','IDontKnow','IDontKnow','IDontKnow','IDontKnow','IDontKnow','IDontKnow','PayCurrency','RecCurrency','Empty','Empty','Empty','Empty','Empty','Empty','Empty','Empty','PayFreq','RecFreq','IDontKnow','IDontKnow','Empty','Empty','Empty','Empty','Empty','Empty','Empty','PaySettleCurr','RecSettleCurr','Empty','Empty','Empty','Empty','Empty','Empty','RecIndex','Empty','Empty','Empty','Empty','Empty','Empty','SEF']
-// const parseUrl = 'https://api.rss2json.com/v1/api.json?rss_url=';
-const htmlparser2 = require("htmlparser2");
-const corsURL = 'https://cors-anywhere.herokuapp.com/';
+const parseUrl = 'https://api.rss2json.com/v1/api.json?rss_url=';
+// const htmlparser2 = require("htmlparser2");
+// const corsURL = 'https://cors-anywhere.herokuapp.com/';
 // const fetch = require("node-fetch");
 // const RSS_URL = `https://kgc0418-tdw-data-0.s3.amazonaws.com/cftc/rss/CFTC_RSS_RATES.rss`;
 // const rssUrl = 'https://kgc0418-tdw-data-0.s3.amazonaws.com/cftc/rss/CFTC_RSS_RATES.rss';
@@ -15,6 +15,7 @@ const corsURL = 'https://cors-anywhere.herokuapp.com/';
 //     console.log(JSON.stringify(rss, null, 3));
 // });
  
+
 class RSSFeed extends Component {
 
    constructor(props) {
@@ -27,23 +28,23 @@ class RSSFeed extends Component {
     }
 
     fetchTradeFeed = async() => { 
-      // fetch(parseUrl + this.props.url)
-      fetch(corsURL + this.props.url
-      , {
+      fetch(parseUrl + this.props.url)
+      // fetch(corsURL + this.props.url
+      // , {
       //   crossDomain:true,
       //   method: 'POST',
-        headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'},
+        // headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'},
       //   // mode: 'cors',
       //   // Accept: 'text/html',
       //   // Cookie: 'Version=1',
       //   // headers: {
       //   //   'Access-Control-Allow-Origin':'http://localhost:3000/',
         // }
-      })
+      // })
       // fetch(RSS_URL)
-      .then(response => response.text())
-      // .then(res => res.json())
-      .then(content => new htmlparser2.parseFeed(content))
+      // .then(response => response.text())
+      .then(res => res.json())
+      // .then(content => new htmlparser2.parseFeed(content))
       // Feed.load(this.props.url)
       // .then(rss => {JSON.stringify(rss, null, 3);})
       .then(
@@ -69,6 +70,12 @@ class RSSFeed extends Component {
       this.fetchTradeFeed();
    }
 
+  //  componentDidMount() {
+  //   this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+  // }
+  // componentWillUnmount() {
+  //   clearInterval(this.interval);
+  // }
 
   render() {
 

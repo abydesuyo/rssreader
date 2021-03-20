@@ -5,13 +5,21 @@ import React, { Component } from 'react';
 import Feeds from './Components/feedbuilder';
 import $ from 'jquery';
 
+// function reloadData(){
+//   window.location.reload(false);
+// }
+
 class App extends Component {
 
   constructor(props){
     super(props);
     this.state = {
-      config: {}
+      config: {},
+      timeout:20
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
@@ -34,15 +42,32 @@ class App extends Component {
     this.getConfig();
   }
 
+  handleChange(event) {
+    this.setState({timeout: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert(`Your Current Refresh Rate is : ${this.state.timeout} seconds`);
+    event.preventDefault();
+  }
 
   render() {
     return (
       <div className="App">
         <div className="Main">
           <h1>Real Time DTCC Trade Feeds</h1>
+          <div>
+            {/* <button onClick={window.location.reload(false)}>Reload Feeds</button> */}
+            <input type="submit" value="Set Auto Refresh" />
+            <select value={this.state.value} onChange={this.handleChange}>
+              <option value="5">15</option>
+              <option value="10">25</option>
+              <option value="20">50</option>
+            </select>
+          </div>
+          </div>
+            <Feeds data={this.state.config.rssfeeds}/>
         </div>
-          <Feeds data={this.state.config.rssfeeds}/>
-      </div>
       
     );
   }
