@@ -103,8 +103,8 @@ class RSSFeed extends Component {
 
       return (
          <section id="rssfeed">
-          {/* <h2 >{tradefeed.feed.url.split('/')[tradefeed.feed.url.split('/').length-1].split('_')[0]}-{tradefeed.feed.title}</h2> */}
-          <h2> {this.props.url.split('/')[this.props.url.split('/').length-1].split('_')[0]} - {tradefeed.title} </h2>
+          <h2 >{tradefeed.feed.url.split('/')[tradefeed.feed.url.split('/').length-1].split('_')[0]}-{tradefeed.feed.title}</h2>
+          {/* <h2> {this.props.url.split('/')[this.props.url.split('/').length-1].split('_')[0]} - {tradefeed.title} </h2> */}
             <div className="table-wrapper">  
                      {/* <div><pre>{JSON.stringify(tradefeed, null, 2) }</pre></div> */}
                   <div id="rssfeed" >

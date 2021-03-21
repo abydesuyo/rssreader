@@ -58,12 +58,14 @@ class App extends Component {
           <h1>Real Time DTCC Trade Feeds</h1>
           <div>
             {/* <button onClick={window.location.reload(false)}>Reload Feeds</button> */}
-            <input type="submit" value="Set Auto Refresh" />
+            {/* <span className="options"> */}
+            <input type="submit" value="Refresh" />
             <select value={this.state.value} onChange={this.handleChange}>
               <option value="5">15</option>
               <option value="10">25</option>
               <option value="20">50</option>
             </select>
+            {/* </span> */}
           </div>
           </div>
             <Feeds data={this.state.config.rssfeeds}/>
