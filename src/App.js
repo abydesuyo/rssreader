@@ -59,12 +59,14 @@ class App extends Component {
           <div>
             {/* <button onClick={window.location.reload(false)}>Reload Feeds</button> */}
             {/* <span className="options"> */}
+            <form id="reloadPage">
             <input type="submit" value="Refresh" />
             <select value={this.state.value} onChange={this.handleChange}>
               <option value="5">15</option>
               <option value="10">25</option>
               <option value="20">50</option>
             </select>
+            </form>
             {/* </span> */}
           </div>
           </div>
